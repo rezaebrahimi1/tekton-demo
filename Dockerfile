@@ -1,4 +1,4 @@
-FROM registry.ficld.ir/alpine:latest
+FROM registry.ficld.ir/nginx:latest
 RUN mkdir /tmp
 RUN chmod 1777 /tmp
 LABEL maintainer="stuart@newlymintedmedia.com"
