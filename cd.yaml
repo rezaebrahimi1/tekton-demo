@@ -22,15 +22,15 @@ spec:
       workspace: pipeline-ws
     params:
     - name: url
-      value: git://github.com/vfarcic/$(params.project)
+      value: git://github.com/rezaebrahimi1/$(params.project)
   - name: build-container-image
     taskRef:
       name: build-kaniko-git
     params:
     - name: app_repo
-      value: git://github.com/vfarcic/$(params.project)
+      value: git://github.com/rezaebrahimi1/$(params.project)
     - name: container_image
-      value: vfarcic/$(params.project)
+      value: quay.io/khomrehaa/$(params.project)
     - name: container_tag
       value: "$(params.release)"
   - name: deploy-staging
@@ -38,7 +38,7 @@ spec:
       name: task-kustomize
     params:
     - name: container_image
-      value: vfarcic/$(params.project)
+      value: quay.io/khomrehaa/$(params.project)
     - name: container_tag
       value: "$(params.release)"
     - name: manifests_path
@@ -62,7 +62,7 @@ spec:
       name: task-kustomize
     params:
     - name: container_image
-      value: vfarcic/$(params.project)
+      value: quay.io/khomrehaa/$(params.project)
     - name: container_tag
       value: "$(params.release)"
     - name: manifests_path
