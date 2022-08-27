@@ -1,4 +1,5 @@
 FROM registry.ficld.ir/alpine:latest
+RUN chmod 1777 /tmp
 LABEL maintainer="stuart@newlymintedmedia.com"
 RUN apk add nginx
 RUN mkdir -p /run/nginx
