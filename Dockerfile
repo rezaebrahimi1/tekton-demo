@@ -1,4 +1,4 @@
-FROM registry.ficld.ir/nginx:latest
+FROM registry.ficld.ir/alpine:latest
 LABEL maintainer="stuart@newlymintedmedia.com"
 RUN apk add nginx
 RUN mkdir -p /run/nginx
